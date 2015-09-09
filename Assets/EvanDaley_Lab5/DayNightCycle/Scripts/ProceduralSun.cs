@@ -30,6 +30,12 @@ public class ProceduralSun : MonoBehaviour {
 		if (currentTimeOfDay >= 1) {
 			currentTimeOfDay = 0;
 		}
+
+		if (currentTimeOfDay >= .75 || currentTimeOfDay <= .2) {
+			timeMultiplier = 2F;
+		} else {
+			timeMultiplier = 1F;
+		}
 	}
 
 	void UpdateSun()
